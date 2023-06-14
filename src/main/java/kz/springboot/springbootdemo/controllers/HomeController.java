@@ -53,7 +53,6 @@ public class HomeController {
     @GetMapping(value = "/")
     public String index(Model model) {
         model.addAttribute("currentUser", getUserData());
-
         List<ShopItems> items = itemService.getAllItems();
         model.addAttribute("tovary", items);
 
